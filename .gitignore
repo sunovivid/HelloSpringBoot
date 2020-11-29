@@ -1,3 +1,6 @@
+# Credential information
+application-oauth.properties
+
 # Project exclude paths
 /.gradle/
 
