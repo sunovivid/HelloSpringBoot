@@ -4,13 +4,14 @@ import lombok.Builder;
 import lombok.Generated;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.sunovivid.hellospringbootagain.springboot.domain.BaseTimeEntity;
 
 import javax.persistence.*;
 
 @Getter //lombok
 @NoArgsConstructor //lombok. 기본 생성자 추가 (public Posts(){})
 @Entity //JPA. 테이블과 링크될 클래스 (ex: SalesManagers.java -> sales_manages 테이블)
-public class Posts {
+public class Posts extends BaseTimeEntity {
     
     @Id //PK
     @GeneratedValue(strategy = GenerationType.IDENTITY) //PK 생성규칙
