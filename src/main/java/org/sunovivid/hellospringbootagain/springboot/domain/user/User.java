@@ -39,10 +39,11 @@ public class User extends BaseTimeEntity {
     public String getRoleKey() {
         return this.role.getKey();
     }
-//    public User update(String name, String picture) {
-//        this.name = name;
-//        this.picture = picture;
-//
-//        return this;
-//    }
+
+    public User update(String name, String picture) {
+        this.name = name;
+        this.picture = picture;
+
+        return this;
+    }
 }

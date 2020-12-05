@@ -5,6 +5,7 @@ import org.springframework.security.config.annotation.web.HttpSecurityBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.sunovivid.hellospringbootagain.springboot.domain.user.Role;
 
 @RequiredArgsConstructor
 @EnableWebSecurity //Spring Security 설정 활성화
@@ -19,7 +20,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                     .authorizeRequests() //url별 권한 관리 설정 옵션의 시작점. 이게 선언되어야만 antMatcher사용가능
                     .antMatchers("/", "/css/**", "/images/**", "/js/**", "/h2-console/**").permitAll() //antMatcher: 권한 관리 대상 지정 옵션, 
-                    .antMatchers("/api/v1/**").hasRole(USER.name()) //해당 주소 api는 USER 권한을 가진 사람만 가능
+                    .antMatchers("/api/v1/**").hasRole(Role.USER.name()) //해당 주소 api는 USER 권한을 가진 사람만 가능
                     .anyRequest().authenticated()
                 .and()
                     .logout()

@@ -32,15 +32,15 @@ public class OAuthAttributes {
     private static OAuthAttributes ofGoogle(String userNameAttributeName, Map<String, Object> attributes) {
         return OAuthAttributes.builder()
                 .name((String) attributes.get("name"))
-                .email(String) attributes.get("email"))
-                .picture(String) attributes.get("picture"))
+                .email((String) attributes.get("email")) //( 안써서 에러
+                .picture((String) attributes.get("picture"))
                 .attributes(attributes)
                 .nameAttributeKey(userNameAttributeName)
                 .build();
     }
 
     public User toEntity() {
-        return OAuthAttributes.builder()
+        return User.builder() //User인데 OAuthAttributes로 해서 에러
                 .name(name)
                 .email(email)
                 .picture(picture)

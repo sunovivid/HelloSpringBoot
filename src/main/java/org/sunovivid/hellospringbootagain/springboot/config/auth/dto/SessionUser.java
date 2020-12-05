@@ -5,6 +5,7 @@ import org.sunovivid.hellospringbootagain.springboot.domain.user.User;
 
 import java.io.Serializable;
 
+//직렬화 기능을 가진 세션 dto
 @Getter
 public class SessionUser implements Serializable {
     private String name;

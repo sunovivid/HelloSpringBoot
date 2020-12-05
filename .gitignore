@@ -1,5 +1,6 @@
 # Credential information
 application-oauth.properties
+# 해당 파일을 보안을 위해 git등록을 제외했으므로 새로운 pc에서 작업할 경우 gcp에 접속하여 값 확인하고 새로 만들어 줘야 함.
 
 # Project exclude paths
 /.gradle/
