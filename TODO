@@ -1,0 +1,3 @@
+TODO: 새로운 환경에서 프로젝트를 클론해서 생성했을 때 에러가 나면
+    1. application-oauth.properties 설정 확인
+    2. Build-Rebuild Project,File-Invalidate Caches / Restart 해주기

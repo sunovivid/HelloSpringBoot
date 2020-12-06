@@ -14,9 +14,9 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 
 import org.sunovivid.hellospringbootagain.springboot.domain.user.User;
-import org.sunovivid.hellospringbootagain.springboot.domain.user.UserRepository;
-import org.sunovivid.hellospringbootagain.springboot.config.auth.dto.OAuthAttributes;
-import org.sunovivid.hellospringbootagain.springboot.config.auth.dto.SessionUser;
+import org.sunovivid.hellospringbootagain.springboot.domain.user.UserRepository; //UserRepository 빨간줄, Cannot resolve symbol "UserRepository"
+import org.sunovivid.hellospringbootagain.springboot.config.auth.dto.OAuthAttributes; //같은에러
+import org.sunovivid.hellospringbootagain.springboot.config.auth.dto.SessionUser; //같은에러
 
 @RequiredArgsConstructor
 @Service
